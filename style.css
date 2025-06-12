@@ -120,38 +120,20 @@ h1, h2, h3, h4, h5, h6 {
     font-weight: 700;
 }
 
-.glassmorphism-card .form-control {
-    background-color: rgba(255, 255, 255, 0.1);
-    color: var(--white);
-    border: 1px solid rgba(255, 255, 255, 0.2);
-    border-radius: 10px;
-    cursor: text;
-}
+/* Removed styles for form-control and copy-btn as they are no longer used */
+/* .glassmorphism-card .form-control { ... } */
+/* .glassmorphism-card .form-control:focus { ... } */
+/* .glassmorphism-card .copy-btn { ... } */
+/* .glassmorphism-card .copy-btn:hover { ... } */
 
-.glassmorphism-card .form-control:focus {
-    background-color: rgba(255, 255, 255, 0.2);
-    border-color: var(--red-primary); /* Uses new primary red */
-    box-shadow: none;
-}
-
-.glassmorphism-card .copy-btn {
-    background-color: var(--red-primary); /* Uses new primary red */
-    border-color: var(--red-primary); /* Uses new primary red */
-    color: var(--white);
-    border-radius: 0 10px 10px 0;
-    transition: all 0.3s ease;
-}
-
-.glassmorphism-card .copy-btn:hover {
-    background-color: var(--red-darker-hover); /* Uses new darker red for hover */
-    border-color: var(--red-darker-hover); /* Uses new darker red for hover */
-    transform: scale(1.05);
-}
-
-.glassmorphism-card .qr-code {
+.glassmorphism-card .arena-logo {
     border-radius: 10px;
     filter: drop-shadow(3px 3px 6px rgba(0, 0, 0, 0.2));
 }
+
+/* qr-code style replaced by arena-logo style */
+/* .glassmorphism-card .qr-code { ... } */
+
 
 .info-link {
     color: var(--white);
@@ -166,9 +148,9 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .info-link:hover {
-    color: var(--red-primary); /* Uses new primary red */
+    color: var(--red-primary); /* Change color on hover */
     transform: scale(1.1);
-    text-shadow: 0 0 10px rgba(255, 57, 74, 0.7); /* Updated glow effect with new color */
+    text-shadow: 0 0 10px rgba(255, 57, 74, 0.7); /* Glow effect */
 }
 
 .info-link i {
@@ -177,27 +159,27 @@ h1, h2, h3, h4, h5, h6 {
 
 /* --- Buy $SNOOFI CTA --- */
 .bg-light-cream {
-    background-color: var(--light-cream); /* Uses updated cream color */
+    background-color: var(--light-cream);
 }
 
 .btn-buy-snoofi {
-    background-color: var(--red-primary); /* Uses new primary red */
-    border-color: var(--red-primary); /* Uses new primary red */
+    background-color: var(--red-primary);
+    border-color: var(--red-primary);
     color: var(--white);
     font-size: 1.8rem;
     padding: 15px 40px;
     border-radius: 50px; /* Pill shape */
     font-weight: bold;
     transition: all 0.3s ease;
-    box-shadow: 0 8px 15px rgba(255, 57, 74, 0.4); /* Updated shadow color with new primary red */
+    box-shadow: 0 8px 15px rgba(255, 57, 74, 0.4);
 }
 
 .btn-buy-snoofi:hover {
-    background-color: var(--red-darker-hover); /* Uses new darker red for hover */
-    border-color: var(--red-darker-hover); /* Uses new darker red for hover */
+    background-color: var(--red-darker-hover);
+    border-color: var(--red-darker-hover);
     color: var(--white);
     transform: scale(1.05); /* Gentle scale */
-    box-shadow: 0 12px 20px rgba(255, 57, 74, 0.6); /* Updated shadow color with new primary red */
+    box-shadow: 0 12px 20px rgba(255, 57, 74, 0.6);
 }
 
 .how-to-buy-link {
@@ -207,7 +189,7 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .how-to-buy-link:hover {
-    color: var(--red-primary) !important; /* Uses new primary red */
+    color: var(--red-primary) !important;
 }
 
 /* --- How to Buy Section --- */
@@ -229,7 +211,7 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .how-to-card .icon-wrapper {
-    background-color: var(--red-primary); /* Uses new primary red */
+    background-color: var(--red-primary);
     border-radius: 50%;
     width: 80px;
     height: 80px;
@@ -238,7 +220,7 @@ h1, h2, h3, h4, h5, h6 {
     align-items: center;
     margin-bottom: 20px;
     color: var(--white);
-    box-shadow: 0 4px 10px rgba(255, 57, 74, 0.3); /* Updated shadow color with new primary red */
+    box-shadow: 0 4px 10px rgba(255, 57, 74, 0.3);
 }
 
 .how-to-card .icon-hover {
@@ -256,7 +238,7 @@ h1, h2, h3, h4, h5, h6 {
     min-height: 60vh;
 }
 
-.btn-telegram-join {
+.btn-x-join { /* New class for X button */
     background-color: var(--black-accent);
     border-color: var(--black-accent);
     color: var(--white);
@@ -264,16 +246,21 @@ h1, h2, h3, h4, h5, h6 {
     padding: 12px 30px;
     border-radius: 50px;
     transition: all 0.3s ease;
-    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.4);
+    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.4); /* Shadow uses black accent color */
 }
 
-.btn-telegram-join:hover {
+.btn-x-join:hover { /* New class for X button */
     background-color: #333;
     border-color: #333;
     color: var(--white);
     transform: scale(1.05);
     box-shadow: 0 12px 20px rgba(0, 0, 0, 0.6);
 }
+
+/* Removed .btn-telegram-join as it's no longer used */
+/* .btn-telegram-join { ... } */
+/* .btn-telegram-join:hover { ... } */
+
 
 .twitter-feed-placeholder {
     background-color: rgba(0, 0, 0, 0.3); /* Slightly transparent black */
@@ -341,7 +328,7 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .footer .list-inline-item a:hover {
-    color: var(--red-primary) !important; /* Uses new primary red */
+    color: var(--red-primary) !important;
 }
 
 /* --- Floating Icons --- */
@@ -356,7 +343,7 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .floating-btn {
-    background-color: var(--red-primary); /* Uses new primary red */
+    background-color: var(--red-primary);
     color: var(--white);
     width: 60px;
     height: 60px;
@@ -364,7 +351,7 @@ h1, h2, h3, h4, h5, h6 {
     display: flex;
     align-items: center;
     justify-content: center;
-    box-shadow: 0 4px 10px rgba(255, 57, 74, 0.4); /* Updated shadow color with new primary red */
+    box-shadow: 0 4px 10px rgba(255, 57, 74, 0.4);
     transition: all 0.3s ease;
     text-decoration: none;
     position: relative;
@@ -372,9 +359,9 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .floating-btn:hover {
-    background-color: var(--red-darker-hover); /* Uses new darker red for hover */
+    background-color: var(--red-darker-hover);
     transform: translateY(-5px);
-    box-shadow: 0 6px 15px rgba(255, 57, 74, 0.6); /* Updated shadow color with new primary red */
+    box-shadow: 0 6px 15px rgba(255, 57, 74, 0.6);
 }
 
 .hover-pulse:hover::after {
