@@ -17,10 +17,11 @@ h1, h2, h3, h4, h5, h6 {
 
 /* Colors */
 :root {
-    --red-primary: #FF4500;
+    --red-primary: #ff394a; /* Main theme color */
+    --red-darker-hover: #e6313d; /* Darker shade for hover effects */
     --white: #FFFFFF;
     --black-accent: #1A1A1A;
-    --light-cream: #F8F4E3; /* Pale beige/cream */
+    --light-cream: #FEFBF5; /* Updated: Slightly more neutral cream/pale beige */
 }
 
 /* --- Hero Section --- */
@@ -129,21 +130,21 @@ h1, h2, h3, h4, h5, h6 {
 
 .glassmorphism-card .form-control:focus {
     background-color: rgba(255, 255, 255, 0.2);
-    border-color: var(--red-primary);
+    border-color: var(--red-primary); /* Uses new primary red */
     box-shadow: none;
 }
 
 .glassmorphism-card .copy-btn {
-    background-color: var(--red-primary);
-    border-color: var(--red-primary);
+    background-color: var(--red-primary); /* Uses new primary red */
+    border-color: var(--red-primary); /* Uses new primary red */
     color: var(--white);
     border-radius: 0 10px 10px 0;
     transition: all 0.3s ease;
 }
 
 .glassmorphism-card .copy-btn:hover {
-    background-color: #e03c00; /* Darker red */
-    border-color: #e03c00;
+    background-color: var(--red-darker-hover); /* Uses new darker red for hover */
+    border-color: var(--red-darker-hover); /* Uses new darker red for hover */
     transform: scale(1.05);
 }
 
@@ -165,9 +166,9 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .info-link:hover {
-    color: var(--red-primary); /* Change color on hover */
+    color: var(--red-primary); /* Uses new primary red */
     transform: scale(1.1);
-    text-shadow: 0 0 10px rgba(255, 69, 0, 0.7); /* Glow effect */
+    text-shadow: 0 0 10px rgba(255, 57, 74, 0.7); /* Updated glow effect with new color */
 }
 
 .info-link i {
@@ -176,27 +177,27 @@ h1, h2, h3, h4, h5, h6 {
 
 /* --- Buy $SNOOFI CTA --- */
 .bg-light-cream {
-    background-color: var(--light-cream);
+    background-color: var(--light-cream); /* Uses updated cream color */
 }
 
 .btn-buy-snoofi {
-    background-color: var(--red-primary);
-    border-color: var(--red-primary);
+    background-color: var(--red-primary); /* Uses new primary red */
+    border-color: var(--red-primary); /* Uses new primary red */
     color: var(--white);
     font-size: 1.8rem;
     padding: 15px 40px;
     border-radius: 50px; /* Pill shape */
     font-weight: bold;
     transition: all 0.3s ease;
-    box-shadow: 0 8px 15px rgba(255, 69, 0, 0.4);
+    box-shadow: 0 8px 15px rgba(255, 57, 74, 0.4); /* Updated shadow color with new primary red */
 }
 
 .btn-buy-snoofi:hover {
-    background-color: #e03c00;
-    border-color: #e03c00;
+    background-color: var(--red-darker-hover); /* Uses new darker red for hover */
+    border-color: var(--red-darker-hover); /* Uses new darker red for hover */
     color: var(--white);
     transform: scale(1.05); /* Gentle scale */
-    box-shadow: 0 12px 20px rgba(255, 69, 0, 0.6);
+    box-shadow: 0 12px 20px rgba(255, 57, 74, 0.6); /* Updated shadow color with new primary red */
 }
 
 .how-to-buy-link {
@@ -206,7 +207,7 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .how-to-buy-link:hover {
-    color: var(--red-primary) !important;
+    color: var(--red-primary) !important; /* Uses new primary red */
 }
 
 /* --- How to Buy Section --- */
@@ -228,7 +229,7 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .how-to-card .icon-wrapper {
-    background-color: var(--red-primary);
+    background-color: var(--red-primary); /* Uses new primary red */
     border-radius: 50%;
     width: 80px;
     height: 80px;
@@ -237,7 +238,7 @@ h1, h2, h3, h4, h5, h6 {
     align-items: center;
     margin-bottom: 20px;
     color: var(--white);
-    box-shadow: 0 4px 10px rgba(255, 69, 0, 0.3);
+    box-shadow: 0 4px 10px rgba(255, 57, 74, 0.3); /* Updated shadow color with new primary red */
 }
 
 .how-to-card .icon-hover {
@@ -340,7 +341,7 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .footer .list-inline-item a:hover {
-    color: var(--red-primary) !important;
+    color: var(--red-primary) !important; /* Uses new primary red */
 }
 
 /* --- Floating Icons --- */
@@ -355,7 +356,7 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .floating-btn {
-    background-color: var(--red-primary);
+    background-color: var(--red-primary); /* Uses new primary red */
     color: var(--white);
     width: 60px;
     height: 60px;
@@ -363,7 +364,7 @@ h1, h2, h3, h4, h5, h6 {
     display: flex;
     align-items: center;
     justify-content: center;
-    box-shadow: 0 4px 10px rgba(255, 69, 0, 0.4);
+    box-shadow: 0 4px 10px rgba(255, 57, 74, 0.4); /* Updated shadow color with new primary red */
     transition: all 0.3s ease;
     text-decoration: none;
     position: relative;
@@ -371,9 +372,9 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .floating-btn:hover {
-    background-color: #e03c00;
+    background-color: var(--red-darker-hover); /* Uses new darker red for hover */
     transform: translateY(-5px);
-    box-shadow: 0 6px 15px rgba(255, 69, 0, 0.6);
+    box-shadow: 0 6px 15px rgba(255, 57, 74, 0.6); /* Updated shadow color with new primary red */
 }
 
 .hover-pulse:hover::after {
