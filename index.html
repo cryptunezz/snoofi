@@ -1,0 +1,244 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>$SNOOFI - The Dog of the Internet</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700&family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <section id="hero" class="d-flex align-items-center justify-content-center text-center text-white vh-100 position-relative">
+        <div class="container position-relative z-1">
+            <img src="snoofi-mascot.png" alt="$SNOOFI Mascot" class="img-fluid snoofi-mascot animate__animated animate__fadeInDown">
+            <!-- <img src="snoofi-logo.png" alt="$SNOOFI Logo" class="img-fluid snoofi-logo animate__animated animate__fadeInUp"> -->
+            <h1 class="display-3 fw-bold mt-4 animate__animated animate__fadeIn">“The Dog of the Internet.”</h1>
+            <p class="lead mb-5 animate__animated animate__fadeInUp animate__delay-1s">Your friendly meme coin, powered by good vibes, barking into the blockchain.</p>
+        </div>
+    </section>
+
+    <section id="token-info" class="py-5 d-flex justify-content-center align-items-center">
+        <div class="container">
+            <div class="card glassmorphism-card p-4 mx-auto text-center animate__animated animate__zoomIn">
+                <h2 class="card-title mb-4">Token Information</h2>
+                <div class="mb-3">
+                    <p class="mb-1 fw-bold">Smart Contract Address:</p>
+                    <div class="input-group mb-3">
+                        <input type="text" class="form-control" value="0x123...abc" id="contractAddress" readonly>
+                        <button class="btn btn-primary copy-btn" type="button" data-bs-toggle="tooltip" data-bs-placement="top" title="Copy to clipboard">
+                            <i class="fas fa-copy"></i>
+                        </button>
+                    </div>
+                    <img src="qr-code.png" alt="QR Code" class="img-fluid qr-code mt-2" style="max-width: 120px;">
+                </div>
+                <div class="d-flex flex-wrap justify-content-center gap-4 mt-4">
+                    <a href="https://t.me/snoofi_channel" target="_blank" class="info-link hover-effect">
+                        <i class="fab fa-telegram fa-2x"></i><br>
+                        Telegram Channel
+                    </a>
+                    <a href="https://t.me/snoofi_community" target="_blank" class="info-link hover-effect">
+                        <i class="fab fa-telegram-plane fa-2x"></i><br>
+                        Telegram Community
+                    </a>
+                    <a href="https://twitter.com/snoofi_coin" target="_blank" class="info-link hover-effect">
+                        <i class="fab fa-x-twitter fa-2x"></i><br>
+                        Twitter (X)
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="buy-cta" class="py-5 text-center bg-light-cream">
+        <div class="container animate__animated animate__fadeInUp">
+            <h2 class="mb-4">Ready to Join the Pack?</h2>
+            <a href="https://uniswap.org" target="_blank" class="btn btn-lg btn-buy-snoofi hover-bounce">
+                BUY $SNOOFI NOW 🚀
+            </a>
+            <p class="mt-3">
+                <a href="#how-to-buy" class="text-decoration-none text-dark how-to-buy-link">How to Buy for beginners</a>
+            </p>
+        </div>
+    </section>
+
+    <section id="how-to-buy" class="py-5 bg-light-cream">
+        <div class="container">
+            <h2 class="text-center mb-5">How to Buy $SNOOFI</h2>
+            <div class="row g-4 justify-content-center">
+                <div class="col-md-6 col-lg-3 animate__animated animate__fadeInLeft animate__delay-0-5s">
+                    <div class="card how-to-card h-100 p-4 text-center">
+                        <div class="icon-wrapper mb-3">
+                            <i class="fas fa-wallet fa-3x icon-hover"></i>
+                        </div>
+                        <h4 class="card-title">1. Install Wallet</h4>
+                        <p class="card-text">Use MetaMask or Trust Wallet to secure your crypto.</p>
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-3 animate__animated animate__fadeInLeft animate__delay-0-7s">
+                    <div class="card how-to-card h-100 p-4 text-center">
+                        <div class="icon-wrapper mb-3">
+                            <i class="fas fa-money-bill-wave fa-3x icon-hover"></i>
+                        </div>
+                        <h4 class="card-title">2. Get ETH/BNB</h4>
+                        <p class="card-text">Buy using your favorite Centralized Exchange (CEX).</p>
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-3 animate__animated animate__fadeInRight animate__delay-0-9s">
+                    <div class="card how-to-card h-100 p-4 text-center">
+                        <div class="icon-wrapper mb-3">
+                            <i class="fas fa-link fa-3x icon-hover"></i>
+                        </div>
+                        <h4 class="card-title">3. Connect to DEX</h4>
+                        <p class="card-text">Use the "Buy $SNOOFI" button to link your wallet.</p>
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-3 animate__animated animate__fadeInRight animate__delay-1-1s">
+                    <div class="card how-to-card h-100 p-4 text-center">
+                        <div class="icon-wrapper mb-3">
+                            <i class="fas fa-dog fa-3x icon-hover"></i>
+                        </div>
+                        <h4 class="card-title">4. Swap & HODL</h4>
+                        <p class="card-text">Trade for $SNOOFI and join the bark-side!</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="community" class="py-5 text-center text-white">
+        <div class="container animate__animated animate__fadeIn">
+            <h2 class="mb-4">The $SNOOFI Pack</h2>
+            <p class="lead mb-5">“$SNOOFI is more than a coin. It’s a doggone family.”</p>
+            <p class="mb-5">
+                Join us on Telegram. Memes, alpha, airdrops & borks await.
+            </p>
+            <a href="https://t.me/snoofi_community" target="_blank" class="btn btn-lg btn-telegram-join hover-bounce">
+                Join our Telegram <i class="fab fa-telegram-plane ms-2"></i>
+            </a>
+
+            <div class="twitter-feed-placeholder mt-5 p-4 rounded-3">
+                <h4 class="mb-3">Latest Borks from Twitter</h4>
+                <p>Twitter feed integration would go here. For a live feed, you'd typically use Twitter's embed code or an API. For now, imagine a scrolling carousel of fun tweets.</p>
+                <div class="fake-tweet-scroller">
+                    <div class="tweet-item">"Just bought more $SNOOFI! LFG! 🚀 #SNOOFI"</div>
+                    <div class="tweet-item">"Loving the vibes in the $SNOOFI community! So much fun. 🐕"</div>
+                    <div class="tweet-item">"The future is barking with $SNOOFI! Get in now! #MemeCoin"</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer class="footer bg-dark text-white py-4 text-center">
+        <div class="container">
+            <div class="row align-items-center">
+                <div class="col-md-4 text-md-start mb-3 mb-md-0">
+                    &copy; 2025 $SNOOFI. All rights reserved.
+                </div>
+                <div class="col-md-4 mb-3 mb-md-0">
+                    <img src="snoofi-mascot-footer.png" alt="$SNOOFI Mascot" class="footer-mascot">
+                    <span class="d-block mt-2">Made by Degens for Degens</span>
+                </div>
+                <div class="col-md-4 text-md-end">
+                    <ul class="list-inline mb-0">
+                        <li class="list-inline-item"><a href="#buy-cta" class="text-white text-decoration-none">Buy</a></li>
+                        <li class="list-inline-item"><a href="https://t.me/snoofi_community" target="_blank" class="text-white text-decoration-none">Telegram</a></li>
+                        <li class="list-inline-item"><a href="https://twitter.com/snoofi_coin" target="_blank" class="text-white text-decoration-none">Twitter</a></li>
+                        <li class="list-inline-item"><a href="#" class="text-white text-decoration-none" onclick="alert('Contract address: 0x123...abc'); return false;">Contract</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <div class="floating-icons">
+        <a href="https://t.me/snoofi_community" target="_blank" class="floating-btn telegram-float hover-pulse" data-bs-toggle="tooltip" data-bs-placement="left" title="Join Telegram Community">
+            <i class="fab fa-telegram-plane fa-2x"></i>
+        </a>
+        <a href="https://twitter.com/snoofi_coin" target="_blank" class="floating-btn twitter-float hover-pulse" data-bs-toggle="tooltip" data-bs-placement="left" title="Follow on Twitter">
+            <i class="fab fa-x-twitter fa-2x"></i>
+        </a>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+    <script>
+        // Initialize tooltips
+        var tooltipTriggerList = [].slice.call(document.querySelectorAll('[data-bs-toggle="tooltip"]'))
+        var tooltipList = tooltipTriggerList.map(function (tooltipTriggerEl) {
+            return new bootstrap.Tooltip(tooltipTriggerEl)
+        })
+
+        // Copy to clipboard functionality
+        document.querySelector('.copy-btn').addEventListener('click', function() {
+            var contractAddress = document.getElementById('contractAddress');
+            contractAddress.select();
+            contractAddress.setSelectionRange(0, 99999); // For mobile devices
+            document.execCommand('copy');
+
+            var tooltip = bootstrap.Tooltip.getInstance(this);
+            tooltip.hide();
+            this.setAttribute('data-bs-original-title', 'Copied!');
+            tooltip.show();
+
+            setTimeout(() => {
+                this.setAttribute('data-bs-original-title', 'Copy to clipboard');
+                tooltip.hide(); // Hide again to reset
+            }, 1500);
+        });
+
+        // Basic scroll animation for sections
+        document.addEventListener('DOMContentLoaded', () => {
+            const sections = document.querySelectorAll('section');
+            const observerOptions = {
+                root: null,
+                rootMargin: '0px',
+                threshold: 0.1
+            };
+
+            const observer = new IntersectionObserver((entries, observer) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        entry.target.querySelectorAll('.animate__animated').forEach(el => {
+                            el.classList.add('animate__animated'); // Re-add base class if removed
+                            el.classList.forEach(cls => {
+                                if (cls.startsWith('animate__')) {
+                                    el.classList.remove(cls); // Remove existing animation classes
+                                }
+                            });
+                            // Re-add specific animation class after a short delay
+                            // This ensures the animation plays every time it comes into view
+                            setTimeout(() => {
+                                if (entry.target.id === 'hero') {
+                                    el.classList.add('animate__fadeInDown', 'animate__fadeInUp', 'animate__fadeIn', 'animate__delay-1s'); // Re-add specific hero animations
+                                } else if (entry.target.id === 'token-info') {
+                                    entry.target.querySelector('.glassmorphism-card').classList.add('animate__zoomIn');
+                                } else if (entry.target.id === 'buy-cta') {
+                                    entry.target.querySelector('.container').classList.add('animate__fadeInUp');
+                                } else if (entry.target.id === 'how-to-buy') {
+                                    entry.target.querySelectorAll('.col-md-6.col-lg-3').forEach((card, index) => {
+                                        if (index % 2 === 0) {
+                                            card.classList.add('animate__fadeInLeft');
+                                        } else {
+                                            card.classList.add('animate__fadeInRight');
+                                        }
+                                    });
+                                } else if (entry.target.id === 'community') {
+                                    entry.target.querySelector('.container').classList.add('animate__fadeIn');
+                                }
+                            }, 50);
+                        });
+                        // observer.unobserve(entry.target); // Uncomment if you want animation to play only once
+                    }
+                });
+            }, observerOptions);
+
+            sections.forEach(section => {
+                observer.observe(section);
+            });
+        });
+
+    </script>
+</body>
+</html>
