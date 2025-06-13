@@ -318,6 +318,7 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 /* --- Floating Icons --- */
+/* Restore fixed positioning for all screen sizes */
 .floating-icons {
     position: fixed;
     bottom: 20px;
@@ -326,6 +327,7 @@ h1, h2, h3, h4, h5, h6 {
     display: flex;
     flex-direction: column;
     gap: 15px;
+    /* Initial state set by JS, but if JS fails, it's visible */
 }
 
 .floating-btn {
@@ -399,22 +401,16 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 
-/* Responsive Floating Icons - MODIFIED SECTION */
+/* Responsive Floating Icons - Restored Fixed Position for Mobile */
 @media (max-width: 576px) {
     .floating-icons {
-        position: static; /* Key change: Make it scroll with the page */
         flex-direction: row; /* Arrange horizontally on small screens */
-        /* Reset positioning properties as they are not needed for static position */
-        bottom: auto;
-        left: auto;
-        right: auto;
-        transform: none;
-        
-        /* Optional: Add some margin to center it and give space at the bottom */
-        margin: 20px auto; 
-        width: fit-content; /* Allow content to dictate width */
+        bottom: 10px; /* Position from bottom on mobile */
+        left: 50%; /* Center horizontally */
+        transform: translateX(-50%); /* Adjust for perfect centering */
+        right: auto; /* Ensure no conflict with 'right' property */
+        width: fit-content;
         gap: 10px;
-        justify-content: center; /* Center buttons horizontally within the container */
     }
     .floating-btn {
         width: 50px;
