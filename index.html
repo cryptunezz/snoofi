@@ -14,7 +14,7 @@
     <section id="hero" class="d-flex align-items-center justify-content-center text-center text-white vh-100 position-relative">
         <div class="container position-relative z-1">
             <img src="snoofi-mascot.png" alt="$SNOOFI Mascot" class="img-fluid snoofi-mascot animate__animated animate__fadeInDown">
-            <!-- <img src="snoofi-logo.png" alt="$SNOOFI Logo" class="img-fluid snoofi-logo animate__animated animate__fadeInUp"> -->
+            <img src="snoofi-logo.png" alt="$SNOOFI Logo" class="img-fluid snoofi-logo animate__animated animate__fadeInUp">
             <h1 class="display-3 fw-bold mt-4 animate__animated animate__fadeIn">“The Dog of the Internet.”</h1>
             <p class="lead mb-5 animate__animated animate__fadeInUp animate__delay-1s">Your friendly meme coin, powered by good vibes, barking into the blockchain.</p>
         </div>
@@ -23,7 +23,7 @@
     <section id="token-info" class="py-5 d-flex justify-content-center align-items-center">
         <div class="container">
             <div class="card glassmorphism-card p-4 mx-auto text-center animate__animated animate__zoomIn">
-                <h2 class="card-title mb-4" style="color: #ff394a;">$SNOOFI is launched on Arena</h2>
+                <h2 class="card-title mb-4">$SNOOFI is launched on Arena</h2>
                 <div class="mb-3">
                     <img src="arena.svg" alt="Arena Logo" class="img-fluid arena-logo mt-2" style="max-width: 150px;">
                 </div>
@@ -123,7 +123,7 @@
                     &copy; 2025 $SNOOFI. All rights reserved.
                 </div>
                 <div class="col-md-4 mb-3 mb-md-0">
-                    <img src="snoofi-logo.png" alt="$SNOOFI Mascot" class="footer-mascot">
+                    <img src="snoofi-mascot-footer.png" alt="$SNOOFI Mascot" class="footer-mascot">
                     <span class="d-block mt-2">Made by Degens for Degens</span>
                 </div>
                 <div class="col-md-4 text-md-end">
@@ -151,9 +151,7 @@
             return new bootstrap.Tooltip(tooltipTriggerEl)
         })
 
-        // No copy to clipboard functionality needed for contract address anymore
-        // However, keep the section observer if you want animations to re-trigger on scroll.
-        // Basic scroll animation for sections
+        // Basic scroll animation for sections (remains as is)
         document.addEventListener('DOMContentLoaded', () => {
             const sections = document.querySelectorAll('section');
             const observerOptions = {
@@ -204,6 +202,36 @@
             });
         });
 
+        // NEW JAVASCRIPT FOR SCROLL-BASED FADE
+        const floatingIcons = document.querySelector('.floating-icons');
+        let lastScrollY = window.scrollY;
+
+        window.addEventListener('scroll', () => {
+            if (window.scrollY > lastScrollY && window.scrollY > 50) { // Added scroll threshold
+                // Scrolling down AND past a certain point
+                floatingIcons.style.opacity = '0'; // Instantly fade out
+                floatingIcons.style.pointerEvents = 'none'; // Make it unclickable when hidden
+            } else {
+                // Scrolling up OR near the top of the page
+                floatingIcons.style.opacity = '1'; // Instantly fade in
+                floatingIcons.style.pointerEvents = 'auto'; // Make it clickable
+            }
+            lastScrollY = window.scrollY;
+        });
+
+        // Handle initial state on page load: hide if already scrolled down, show if at top
+        document.addEventListener('DOMContentLoaded', () => {
+            // Apply a CSS transition for smooth fading
+            floatingIcons.style.transition = 'opacity 0.3s ease-out'; // Add a transition for smooth fade
+
+            if (window.scrollY === 0) {
+                floatingIcons.style.opacity = '1';
+                floatingIcons.style.pointerEvents = 'auto';
+            } else {
+                floatingIcons.style.opacity = '0';
+                floatingIcons.style.pointerEvents = 'none';
+            }
+        });
     </script>
 </body>
 </html>
