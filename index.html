@@ -143,7 +143,7 @@
         </a>
     </div>
 
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
     <script>
         // Initialize tooltips
         var tooltipTriggerList = [].slice.call(document.querySelectorAll('[data-bs-toggle="tooltip"]'))
@@ -151,8 +151,6 @@
             return new bootstrap.Tooltip(tooltipTriggerEl)
         })
 
-        // No copy to clipboard functionality needed for contract address anymore
-        // However, keep the section observer if you want animations to re-trigger on scroll.
         // Basic scroll animation for sections
         document.addEventListener('DOMContentLoaded', () => {
             const sections = document.querySelectorAll('section');
@@ -173,10 +171,9 @@
                                 }
                             });
                             // Re-add specific animation class after a short delay
-                            // This ensures the animation plays every time it comes into view
                             setTimeout(() => {
                                 if (entry.target.id === 'hero') {
-                                    el.classList.add('animate__fadeInDown', 'animate__fadeInUp', 'animate__fadeIn', 'animate__delay-1s'); // Re-add specific hero animations
+                                    el.classList.add('animate__fadeInDown', 'animate__fadeInUp', 'animate__fadeIn', 'animate__delay-1s');
                                 } else if (entry.target.id === 'token-info') {
                                     entry.target.querySelector('.glassmorphism-card').classList.add('animate__zoomIn');
                                 } else if (entry.target.id === 'buy-cta') {
@@ -194,7 +191,7 @@
                                 }
                             }, 50);
                         });
-                        // observer.unobserve(entry.target); // Uncomment if you want animation to play only once
+                        // observer.unobserve(entry.target);
                     }
                 });
             }, observerOptions);
@@ -202,8 +199,47 @@
             sections.forEach(section => {
                 observer.observe(section);
             });
-        });
 
+            // --- NEW: Floating X button fade on mobile scroll ---
+            const twitterFloatBtn = document.querySelector('.floating-btn.twitter-float');
+
+            if (twitterFloatBtn) { // Ensure the button exists
+                const scrollThreshold = 150; // Pixels scrolled down before fading (adjust as needed)
+                const mobileBreakpoint = 768; // Bootstrap's 'md' breakpoint, common for mobile views
+
+                const handleScrollVisibility = () => {
+                    const isMobile = window.innerWidth <= mobileBreakpoint;
+
+                    if (isMobile) {
+                        if (window.scrollY > scrollThreshold) {
+                            twitterFloatBtn.style.opacity = '0';
+                            twitterFloatBtn.style.pointerEvents = 'none'; // Make it unclickable when hidden
+                        } else {
+                            twitterFloatBtn.style.opacity = '1';
+                            twitterFloatBtn.style.pointerEvents = 'auto'; // Make it clickable
+                        }
+                    } else {
+                        // Ensure it's always visible and clickable on desktop
+                        twitterFloatBtn.style.opacity = '1';
+                        twitterFloatBtn.style.pointerEvents = 'auto';
+                    }
+                };
+
+                window.addEventListener('scroll', handleScrollVisibility);
+                window.addEventListener('resize', () => { // Handle orientation changes or window resizing
+                    // Debounce resize to prevent too many calls
+                    clearTimeout(window.resizeTimeout);
+                    window.resizeTimeout = setTimeout(handleScrollVisibility, 100);
+                });
+
+                // Run on initial load to set correct state if already scrolled or on mobile
+                handleScrollVisibility();
+            }
+            // --- END NEW BLOCK ---
+
+        });
     </script>
+</body>
+</html>
 </body>
 </html>
