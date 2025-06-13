@@ -118,22 +118,13 @@ h1, h2, h3, h4, h5, h6 {
 .glassmorphism-card h2 {
     font-size: 2rem;
     font-weight: 700;
+    color: var(--red-primary); /* Changed text color to theme red */
 }
-
-/* Removed styles for form-control and copy-btn as they are no longer used */
-/* .glassmorphism-card .form-control { ... } */
-/* .glassmorphism-card .form-control:focus { ... } */
-/* .glassmorphism-card .copy-btn { ... } */
-/* .glassmorphism-card .copy-btn:hover { ... } */
 
 .glassmorphism-card .arena-logo {
     border-radius: 10px;
     filter: drop-shadow(3px 3px 6px rgba(0, 0, 0, 0.2));
 }
-
-/* qr-code style replaced by arena-logo style */
-/* .glassmorphism-card .qr-code { ... } */
-
 
 .info-link {
     color: var(--white);
@@ -256,11 +247,6 @@ h1, h2, h3, h4, h5, h6 {
     transform: scale(1.05);
     box-shadow: 0 12px 20px rgba(0, 0, 0, 0.6);
 }
-
-/* Removed .btn-telegram-join as it's no longer used */
-/* .btn-telegram-join { ... } */
-/* .btn-telegram-join:hover { ... } */
-
 
 .twitter-feed-placeholder {
     background-color: rgba(0, 0, 0, 0.3); /* Slightly transparent black */
@@ -413,16 +399,22 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 
-/* Responsive Floating Icons */
+/* Responsive Floating Icons - MODIFIED SECTION */
 @media (max-width: 576px) {
     .floating-icons {
+        position: static; /* Key change: Make it scroll with the page */
         flex-direction: row; /* Arrange horizontally on small screens */
-        bottom: 10px;
-        left: 50%;
-        transform: translateX(-50%);
-        right: auto; /* Remove right positioning */
-        width: fit-content;
+        /* Reset positioning properties as they are not needed for static position */
+        bottom: auto;
+        left: auto;
+        right: auto;
+        transform: none;
+        
+        /* Optional: Add some margin to center it and give space at the bottom */
+        margin: 20px auto; 
+        width: fit-content; /* Allow content to dictate width */
         gap: 10px;
+        justify-content: center; /* Center buttons horizontally within the container */
     }
     .floating-btn {
         width: 50px;
